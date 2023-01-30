@@ -1,8 +1,11 @@
 %YAML 1.1
 ---
 
+# Procure por ens192 e mude para o nome de interface do seu sistema
+
+
 # Suricata configuration file. In addition to the comments describing all
-#options in this file, full documentation can be found at:
+# options in this file, full documentation can be found at:
 # https://redmine.openinfosecfoundation.org/projects/suricata/wiki/Suricatayaml
 
 # NOTE: This version of the Suricata.yaml file is modified by the Emerging Threats
@@ -279,7 +282,7 @@ nfq:
 # af-packet support
 # Set threads to > 1 to use PACKET_FANOUT support
 af-packet:
-  - interface: eth0
+  - interface: ens192
     # Number of receive threads (>1 will enable experimental flow pinned
     # runmode)
     threads: 1
@@ -693,7 +696,7 @@ logging:
 # PF_RING configuration. for use with native PF_RING support
 # for more info see http://www.ntop.org/PF_RING.html
 pfring:
-  - interface: eth0
+  - interface: ens192
     # Number of receive threads (>1 will enable experimental flow pinned
     # runmode)
     threads: 1
@@ -726,7 +729,7 @@ pfring:
   #  cluster-type: cluster_flow
 
 pcap:
-  - interface: eth0
+  - interface: ens192
     #buffer-size: 32768
     #bpf-filter: "tcp and port 25"
     # Choose checksum verification mode for the interface. At the moment
